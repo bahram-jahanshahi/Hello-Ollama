@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="robots" content="noindex" />
+<title>Index of milestone/</title>
+</head>
+<body>
+<h1>Index of milestone/</h1>
+<pre>Name                  Last modified      Size</pre><hr/>
+<pre><a href="AspNetCoreExample/">AspNetCoreExample/</a>     07-Aug-2018 10:23    -
+<a href="com/">com/</a>                   01-Apr-2015 10:57    -
+<a href="de/">de/</a>                    02-Oct-2018 16:00    -
+<a href="io/">io/</a>                    11-Jun-2014 20:59    -
+<a href="org/">org/</a>                   05-May-2013 13:51    -
+<a href="pl/">pl/</a>                    03-Jun-2018 19:48    -
+<a href="samples/">samples/</a>               17-Nov-2014 23:04    -
+<a href="spring-session-build/">spring-session-build/</a>  06-Apr-2016 14:33    -
+</pre>
+<hr/><address style="font-size:small;">Artifactory Online Server</address></body></html>

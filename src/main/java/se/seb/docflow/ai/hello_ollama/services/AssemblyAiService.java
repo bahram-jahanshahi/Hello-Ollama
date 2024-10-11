@@ -1,11 +1,13 @@
 package se.seb.docflow.ai.hello_ollama.services;
 
+import com.assemblyai.api.RealtimeTranscriber;
 import com.assemblyai.api.resources.transcripts.types.Transcript;
 import com.assemblyai.api.resources.transcripts.types.TranscriptOptionalParams;
 import com.assemblyai.api.resources.transcripts.types.TranscriptStatus;
 import org.springframework.stereotype.Service;
 
 import com.assemblyai.api.AssemblyAI;
+import se.seb.docflow.ai.hello_ollama.conf.AssemblyAiProperties;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,10 +16,16 @@ import java.util.Optional;
 @Service
 public class AssemblyAiService {
 
+    private final AssemblyAiProperties assemblyAiProperties;
+
+    public AssemblyAiService(AssemblyAiProperties assemblyAiProperties) {
+        this.assemblyAiProperties = assemblyAiProperties;
+    }
+
     public Optional<String> speechToText() {
 
         AssemblyAI aai = AssemblyAI.builder()
-                .apiKey("c856769cbde0438d9137a1d2eaae4ba5")
+                .apiKey(assemblyAiProperties.getApiKey())
                 .build();
 
         var params = TranscriptOptionalParams.builder()
@@ -50,7 +58,7 @@ public class AssemblyAiService {
     public Optional<String> speechToTextLocally(String fileAddress) {
 
         AssemblyAI aai = AssemblyAI.builder()
-                .apiKey("c856769cbde0438d9137a1d2eaae4ba5")
+                .apiKey(assemblyAiProperties.getApiKey())
                 .build();
 
         var params = TranscriptOptionalParams.builder()
@@ -75,5 +83,11 @@ public class AssemblyAiService {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void realTimeTranscribe() {
+
+        RealtimeTranscriber realtimeTranscriber;
+
     }
 }
